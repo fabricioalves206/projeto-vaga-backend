@@ -17,5 +17,7 @@ class Employee(models.Model):
     
 
 class Dependent(models.Model):
+    """model for employee dependents"""
+    
     name = models.CharField(max_length=100)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name="dependents")
