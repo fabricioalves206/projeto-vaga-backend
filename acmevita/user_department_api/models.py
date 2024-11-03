@@ -9,7 +9,7 @@ class Employee(models.Model):
     """model for employees from ACMEVita"""
 
     full_name = models.CharField(max_length=100)
-    department = models.ForeignKey(Department, null=True, on_delete=models.SET_NULL, related_name="employees")
+    department = models.ForeignKey(Department, null=True, on_delete=models.CASCADE, related_name="employees")
 
     @property
     def have_dependents(self):
