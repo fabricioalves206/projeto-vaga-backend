@@ -29,7 +29,7 @@ Caso não o tenha instalado em sua máquina, siga o tutorial para Ubuntu dispon�
 2. Configure as variáveis de ambiente:
     - Crie um arquivo **.env** com as variáveis de ambiente necessárias, sendo elas **DEBUG** e **SECRET_KEY**.
     
-    Nesse desafio, irei expor aqui no repositório a SECRET_KEY por motivos de conviniência.
+    Nesse desafio, irei expor aqui no repositório a SECRET_KEY por motivos de conveniência.
     
     ```bash
     SECRET_KEY=django-insecure-&v7ys^ddd76d$%19ig-wr3#m#q*zay#+^gij5s@tg65!#$n@e)
@@ -42,7 +42,7 @@ Caso não o tenha instalado em sua máquina, siga o tutorial para Ubuntu dispon�
     ```bash
     docker docker run -it -p 8000:8000 <NOME_DA_IMAGEM>
 
-## Endpoits da API
+## Endpoints da API
 
 Os endpoints disponíveis são:
 - **GET/0.0.0.0:8000/api/v1/departments**: Retorna uma lista de todos os departamentos em formato JSON.
