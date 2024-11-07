@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import DepartmentListView, EmployeeListView
+from .views import departments_list, employees_by_department_list
 
 urlpatterns = [
-    path('departments/', DepartmentListView.as_view(), name='department-list'),
-    path('departments/<int:department_id>/employees', EmployeeListView.as_view(), name='employee-list'),
+    path('departments/', departments_list, name='department-list'),
+    path('departments/<int:department_id>/employees', employees_by_department_list, name='employee-list'),
 ]

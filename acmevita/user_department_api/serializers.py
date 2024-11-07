@@ -1,16 +1,7 @@
-from rest_framework import serializers
-from .models import Department, Employee
+from .models import Employee, Department
 
+def department_serializer(department):
+    return {"pk": department.id, "name": department.name}
 
-class DepartmentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Department
-        fields = ['pk', 'name']
-
-
-class EmployeeSerializer(serializers.ModelSerializer):
-    have_dependents = serializers.BooleanField()
-
-    class Meta:
-        model = Employee
-        fields = ['full_name', 'have_dependents']
+def employee_serializer(employee):
+    return {"full_name": employee.full_name, "have_dependent": employee.dependents.exists()}
