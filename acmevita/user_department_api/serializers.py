@@ -1,5 +1,3 @@
-from .models import Employee, Department
-
 def department_serializer(department):
     return {"pk": department.id, "name": department.name}
 
