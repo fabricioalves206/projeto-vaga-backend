@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from .models import Department, Employee
+from .models import Department
 from .serializers import department_serializer, employee_serializer
 
 def departments_list(request):
